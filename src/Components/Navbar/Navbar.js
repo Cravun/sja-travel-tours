@@ -1,24 +1,23 @@
-import React from "react";
-
+import "./styles/scss/navbar.scss";
 function Navbar() {
   return (
     <nav>
-      <a>
-        <h1>Logo</h1>
+      <a className="Navbar-Logo" href="#">
+        Logo
       </a>
-      <div>
+      <div className="Navbar">
         <ul>
           <li>
-            <a href="">Home</a>
+            <a href="#">Home</a>
           </li>
           <li>
-            <a href="">Manage</a>
+            <a href="#">Manage</a>
           </li>
           <li>
-            <a href="">Book</a>
+            <a href="#">Book</a>
           </li>
           <li>
-            <a href="">Login</a>
+            <a href="#">Login</a>
           </li>
         </ul>
       </div>
