@@ -1,3 +1,8 @@
+// Inter Font
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+@import "/src/Globals";
+
+//==== Navigation ===
 nav {
   width: 100%;
   display: flex;
@@ -5,6 +10,9 @@ nav {
   justify-content: space-between;
   padding: 0;
 }
+// ==================
+
+//=== Navbar Class ===
 .Navbar {
   position: relative;
   right: 40px;
@@ -16,5 +24,14 @@ nav {
   li {
     padding: 0 20px;
     list-style: none;
+    font-family: "Inter";
+    font-style: normal;
+  }
+  a {
+    font-weight: 700;
+    color: $PrimaryColor;
+    font-size: 20px;
+    text-decoration: none;
   }
 }
+// ==================
