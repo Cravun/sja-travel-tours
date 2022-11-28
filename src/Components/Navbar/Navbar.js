@@ -5,6 +5,8 @@ function Navbar() {
       <a className="Navbar-Logo" href="#">
         Logo
       </a>
+      <input className="Navbar-Search" type="text" placeholder="Search"></input>
+
       <div className="Navbar">
         <ul>
           <li>

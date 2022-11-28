@@ -12,6 +12,24 @@ nav {
 }
 // ==================
 
+// === Navbar Search ===
+.Navbar-Search {
+  ::placeholder {
+    color: red;
+  }
+}
+input {
+  border: 3px solid #ffcc34;
+  border-radius: 50px;
+  width: 170px;
+  height: 28px;
+  @include PrimaryFont();
+  font-weight: 400;
+  font-size: 18px;
+}
+
+// ==================
+
 //=== Navbar Class ===
 .Navbar {
   position: relative;
@@ -24,8 +42,7 @@ nav {
   li {
     padding: 0 20px;
     list-style: none;
-    font-family: "Inter";
-    font-style: normal;
+    @include PrimaryFont();
   }
   a {
     font-weight: 700;
