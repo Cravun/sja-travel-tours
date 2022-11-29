@@ -1,5 +1,8 @@
+// === Components ===
 import "./styles/scss/navbar.scss";
-function Navbar() {
+import { Link } from "react-router-dom";
+
+const Navbar = () => {
   return (
     <nav>
       <a className="Navbar-Logo" href="#">
@@ -9,11 +12,11 @@ function Navbar() {
 
       <div className="Navbar">
         <ul>
-          <li>
-            <a href="#">Home</a>
+          <li className="active">
+            <Link to="/Home">Home</Link>
           </li>
           <li>
-            <a href="#">Manage</a>
+            <Link to="/Manage">Manage</Link>
           </li>
           <li>
             <a href="#">Book</a>
@@ -25,5 +28,5 @@ function Navbar() {
       </div>
     </nav>
   );
-}
+};
 export default Navbar;

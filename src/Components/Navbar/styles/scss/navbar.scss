@@ -21,11 +21,14 @@ nav {
 input {
   border: 3px solid #ffcc34;
   border-radius: 50px;
-  width: 170px;
+  width: 165px;
   height: 28px;
   @include PrimaryFont();
   font-weight: 400;
   font-size: 18px;
+}
+input[type="text"] {
+  padding: 0 25px;
 }
 
 // ==================
