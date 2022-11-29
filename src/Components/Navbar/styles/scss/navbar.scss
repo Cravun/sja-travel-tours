@@ -1,5 +1,4 @@
 // Inter Font
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 @import "/src/Globals";
 
 //==== Navigation ===
@@ -30,11 +29,13 @@ input {
 input[type="text"] {
   padding: 0 25px;
 }
+#Navbar-Search {
+}
 
 // ==================
 
 //=== Navbar Class ===
-.Navbar {
+.Navbar_Menu {
   position: relative;
   right: 40px;
   ul {
@@ -55,3 +56,30 @@ input[type="text"] {
   }
 }
 // ==================
+
+// === Mobile Navbar ===
+.Mobile_Navigation {
+  display: none;
+}
+// ====================
+
+@media (max-width: 768px) {
+  nav {
+    .Navbar-Logo {
+      display: flex;
+      position: absolute;
+      top: 15px;
+      left: 35px;
+    }
+    .Navbar_Menu {
+      .Nav-Links {
+        display: none;
+      }
+    }
+    .Mobile_Navigation {
+      position: absolute;
+      display: block;
+      list-style: none;
+    }
+  }
+}

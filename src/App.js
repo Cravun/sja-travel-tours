@@ -1,24 +1,26 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./App.scss";
 // === Components ===
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home/Home";
 import Manage from "./Components/Manage/Manage";
+import Book from "./Components/Book/Book";
+import Login from "./Components/Login/Login";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route exact path="/Home" element={<Home />} />
-          <Route exact path="/Manage" element={<Manage />} />
-        </Routes>
-      </Router>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/Manage" element={<Manage />} />
+        <Route exact path="/Book" element={<Book />} />
+        <Route exact path="/Login" element={<Login />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

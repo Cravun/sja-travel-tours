@@ -1,0 +1,14 @@
+@import "/src/Globals";
+
+.Home-Container {
+  text-align: center;
+  position: relative;
+  top: 145px;
+  h1 {
+    @include PrimaryFont();
+    font-size: 56px;
+    text-align: justify;
+    width: 62%;
+    margin: auto;
+  }
+}

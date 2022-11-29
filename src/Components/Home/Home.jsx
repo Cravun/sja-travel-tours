@@ -7,6 +7,7 @@ export const Home = () => {
         Providing you with comfort and relaxation across the nation at the
         cheapest rates.
       </h1>
+      <div className="Book-Container"></div>
     </div>
   );
 };
