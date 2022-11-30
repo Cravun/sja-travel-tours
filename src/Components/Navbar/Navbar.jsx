@@ -4,47 +4,34 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import Cross from "./Cross";
 import Icon from "./Icon";
-import { ImCross } from "react-icons/im";
 // === Components ===
 
 const Navbar = () => {
   const [Mobile, setMobile] = useState(true);
   return (
     <nav>
-      <a className="Navbar-Logo" href="#">
+      <Link to="" className="Navbar-Logo">
         Logo
-      </a>
-      <div className="">
-        <input
-          className="justify-content-center"
-          type="text"
-          placeholder="Search"
-        ></input>
+      </Link>
+      <div className="Navbar-Search">
+        <input type="text" placeholder="Search"></input>
       </div>
       <div className="Navbar_Menu">
         <ul
           className={Mobile ? "Nav-Links-Mobile" : "Nav-Links"}
           onClick={() => setMobile(false)}
         >
-          <li className="d-flex justify-content-center">
-            <Link className="d-flex justify-content-center" to="/">
-              Home
-            </Link>
+          <li>
+            <Link to="/">Home</Link>
           </li>
-          <li className="d-flex justify-content-center">
-            <Link className="d-flex justify-content-center" to="/Manage">
-              Manage
-            </Link>
+          <li>
+            <Link to="/Manage">Manage</Link>
           </li>
-          <li className="d-flex justify-content-center">
-            <Link className="d-flex justify-content-center" to="/Book">
-              Book
-            </Link>
+          <li>
+            <Link to="/Book">Book</Link>
           </li>
-          <li className="d-flex justify-content-center">
-            <Link className="d-flex justify-content-center" to="/Login">
-              Login
-            </Link>
+          <li>
+            <Link to="/Login">Login</Link>
           </li>
         </ul>
 
