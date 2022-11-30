@@ -2,7 +2,8 @@
 import "./styles/scss/navbar.scss";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { FaBars } from "react-icons/fa";
+import Cross from "./Cross";
+import Icon from "./Icon";
 import { ImCross } from "react-icons/im";
 // === Components ===
 
@@ -13,37 +14,48 @@ const Navbar = () => {
       <a className="Navbar-Logo" href="#">
         Logo
       </a>
-      <input
-        className="material-symbols-outlined"
-        id="Navbar-Search"
-        type="text"
-        placeholder="Search"
-      ></input>
-
+      <div className="">
+        <input
+          className="justify-content-center"
+          type="text"
+          placeholder="Search"
+        ></input>
+      </div>
       <div className="Navbar_Menu">
         <ul
           className={Mobile ? "Nav-Links-Mobile" : "Nav-Links"}
           onClick={() => setMobile(false)}
         >
-          <li>
-            <Link to="/">Home</Link>
+          <li className="d-flex justify-content-center">
+            <Link className="d-flex justify-content-center" to="/">
+              Home
+            </Link>
           </li>
-          <li>
-            <Link to="/Manage">Manage</Link>
+          <li className="d-flex justify-content-center">
+            <Link className="d-flex justify-content-center" to="/Manage">
+              Manage
+            </Link>
           </li>
-          <Link to="/Book">
-            <li>Book</li>
-          </Link>
-          <Link to="/Login">
-            <li>Login</li>
-          </Link>
+          <li className="d-flex justify-content-center">
+            <Link className="d-flex justify-content-center" to="/Book">
+              Book
+            </Link>
+          </li>
+          <li className="d-flex justify-content-center">
+            <Link className="d-flex justify-content-center" to="/Login">
+              Login
+            </Link>
+          </li>
         </ul>
 
         {/*==== Mobile Navigation ====*/}
       </div>
       <div className="Mobile_Navigation">
-        <button className="Mobile_Navigation_Button">
-          {Mobile ? <ImCross /> : <FaBars />}
+        <button
+          className="Mobile_Navigation_Button"
+          onClick={() => setMobile(!Mobile)}
+        >
+          {Mobile ? <Cross /> : <Icon />}
         </button>
       </div>
     </nav>

@@ -1,5 +1,6 @@
 // Inter Font
 @import "/src/Globals";
+@import "/src/mixin";
 
 //==== Navigation ===
 nav {
@@ -38,7 +39,8 @@ input[type="text"] {
 .Navbar_Menu {
   position: relative;
   right: 40px;
-  ul {
+  // === Nav-Links ===
+  ul .Nav-Links {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,32 +56,23 @@ input[type="text"] {
     font-size: 20px;
     text-decoration: none;
   }
+  // === Nav-Links-Mobile ===
+  ul .Nav-Links-Mobile {
+  }
 }
 // ==================
 
 // === Mobile Navbar ===
 .Mobile_Navigation {
   display: none;
+  .Mobile_Navigation_Button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
 }
 // ====================
 
-@media (max-width: 768px) {
-  nav {
-    .Navbar-Logo {
-      display: flex;
-      position: absolute;
-      top: 15px;
-      left: 35px;
-    }
-    .Navbar_Menu {
-      .Nav-Links {
-        display: none;
-      }
-    }
-    .Mobile_Navigation {
-      position: absolute;
-      display: block;
-      list-style: none;
-    }
-  }
+@media (max-width: 768px) and (min-height: 1024px) {
+  @include Responsive_768px();
 }

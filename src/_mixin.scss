@@ -1,0 +1,55 @@
+@mixin Responsive_768px {
+  nav {
+    input {
+      position: fixed;
+      top: 2.4em;
+      right: 15em;
+      height: 40px;
+    }
+    .Navbar-Logo {
+      display: none;
+    }
+    .Navbar_Menu {
+      position: relative;
+      text-align: center;
+      margin: auto;
+      li {
+        padding: 0 25px;
+        line-height: 8em;
+        a {
+          font-size: 25px;
+        }
+      }
+      .Nav-Links {
+        display: none;
+      }
+      .Nav-Links-Mobile {
+        position: fixed;
+        display: block;
+        top: 6em;
+        right: -3em;
+        width: 55em;
+        height: 110em;
+        z-index: 100;
+        background: white;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+    .Mobile_Navigation {
+      position: fixed;
+      right: 45em;
+      top: 0.2em;
+      display: block;
+    }
+    .Mobile_Navigation_Button {
+      font-size: 32px;
+      svg {
+        position: absolute;
+        bottom: -1.7em;
+        left: 20em;
+      }
+    }
+  }
+}
+@mixin Ipad-Mini {
+}
