@@ -21,11 +21,14 @@ nav {
 
   // === Navbar Search ===
   .Navbar-Search {
+    @include Ipad-Mini {
+      background: white;
+    }
     ::placeholder {
       color: $PrimaryColor;
     }
     input {
-      border: 3px solid $SecondaryColor;
+      border: 3px solid $SecondColor;
       border-radius: 50px;
       width: 165px;
       height: 28px;
@@ -64,7 +67,7 @@ nav {
         display: block;
         top: 6em;
         right: -3em;
-        width: 55em;
+        width: 56em;
         height: 110em;
         z-index: 100;
         background: white;
@@ -94,10 +97,17 @@ nav {
       color: $PrimaryColor;
       font-size: 20px;
       text-decoration: none;
+      &:hover {
+        color: $ThirdColor;
+      }
       @include Ipad-Mini {
         font-size: 25px;
       }
     }
+    .active {
+      color: $ThirdColor;
+    }
+
     // === Nav-Links-Mobile ===
   }
   // ==================

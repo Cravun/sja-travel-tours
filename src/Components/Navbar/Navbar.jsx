@@ -1,13 +1,18 @@
 // === Components ===
 import "./styles/scss/navbar.scss";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Cross from "./Cross";
 import Icon from "./Icon";
 // === Components ===
 
 const Navbar = () => {
+  const location = useLocation();
   const [Mobile, setMobile] = useState(true);
+  const [url, setUrl] = useState(null);
+  useEffect(() => {
+    setUrl(location.pathname);
+  }, [location]);
   return (
     <nav>
       <Link to="" className="Navbar-Logo">
@@ -22,16 +27,36 @@ const Navbar = () => {
           onClick={() => setMobile(false)}
         >
           <li>
-            <Link to="/">Home</Link>
+            <Link
+              to="/"
+              className={"underline" + (url === "/" ? " active" : "")}
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/Manage">Manage</Link>
+            <Link
+              to="/Manage"
+              className={"underline" + (url === "/Manage" ? " active" : "")}
+            >
+              Manage
+            </Link>
           </li>
           <li>
-            <Link to="/Book">Book</Link>
+            <Link
+              to="/Book"
+              className={"underline" + (url === "/Book" ? " active" : "")}
+            >
+              Book
+            </Link>
           </li>
           <li>
-            <Link to="/Login">Login</Link>
+            <Link
+              to="/Login"
+              className={"underline" + (url === "/Login" ? " active" : "")}
+            >
+              Login
+            </Link>
           </li>
         </ul>
 
