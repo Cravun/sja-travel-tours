@@ -1,10 +1,32 @@
-// === Components ===
-import "./styles/scss/navbar.scss";
+import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Cross from "./Cross";
-import Icon from "./Icon";
+import { Icon, Cross } from "./Hamburger";
+
 // === Components ===
+
+const Navigation = styled.nav`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+`;
+
+const NavbarSearch = styled.div``;
+
+const NavbarMenu = styled.div``;
+
+const MobileNavigation = styled.div`
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+`;
 
 const Navbar = () => {
   const location = useLocation();
@@ -13,15 +35,16 @@ const Navbar = () => {
   useEffect(() => {
     setUrl(location.pathname);
   }, [location]);
+
   return (
-    <nav>
+    <Navigation>
       <Link to="" className="Navbar-Logo">
         Logo
       </Link>
-      <div className="Navbar-Search">
+      <NavbarSearch>
         <input type="text" placeholder="Search"></input>
-      </div>
-      <div className="Navbar_Menu">
+      </NavbarSearch>
+      <NavbarMenu>
         <ul
           className={Mobile ? "Nav-Links-Mobile" : "Nav-Links"}
           onClick={() => setMobile(false)}
@@ -36,41 +59,30 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              to="/Manage"
-              className={"underline" + (url === "/Manage" ? " active" : "")}
-            >
-              Manage
-            </Link>
-          </li>
-          <li>
-            <Link
               to="/Book"
-              className={"underline" + (url === "/Book" ? " active" : "")}
+              className={"underline" + (url === "/" ? " active" : "")}
             >
               Book
             </Link>
           </li>
           <li>
             <Link
-              to="/Login"
-              className={"underline" + (url === "/Login" ? " active" : "")}
+              to="/Manage"
+              className={"underline" + (url === "/" ? " active" : "")}
             >
-              Login
+              Manage
             </Link>
           </li>
         </ul>
+      </NavbarMenu>
 
-        {/*==== Mobile Navigation ====*/}
-      </div>
-      <div className="Mobile_Navigation">
-        <button
-          className="Mobile_Navigation_Button"
-          onClick={() => setMobile(!Mobile)}
-        >
+      {/*==== Mobile Navigation ====*/}
+      <MobileNavigation>
+        <button onClick={() => setMobile(!Mobile)}>
           {Mobile ? <Cross /> : <Icon />}
         </button>
-      </div>
-    </nav>
+      </MobileNavigation>
+    </Navigation>
   );
 };
 export default Navbar;
