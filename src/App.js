@@ -5,9 +5,9 @@ import "./App.scss";
 // === Components ===
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Pages/Home/Home";
-import Book from "./Pages/Book/Book";
-import Login from "./Pages/Login/Login";
 import Manage from "./Pages/Manage/Manage";
+import Service from "./Pages/Service/Service";
+import About from "./Pages/About us/AboutUs";
 
 const App = () => {
   return (
@@ -15,9 +15,9 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/Book" element={<Book />} />
-        <Route exact path="/Login" element={<Login />} />
         <Route exact path="/Login" element={<Manage />} />
+        <Route exact path="/Service" element={<Service />} />
+        <Route exact path="/About Us" element={<About />} />
       </Routes>
     </Router>
   );

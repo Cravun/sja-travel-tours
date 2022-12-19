@@ -3,7 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Icon, Cross } from "./Hamburger";
 
-// === Components ===
+// === Styled ===
+import { PrimaryFont, GlobalStyles, PrimaryColor } from "../../Global";
 
 const Navigation = styled.nav`
   width: 100%;
@@ -11,12 +12,27 @@ const Navigation = styled.nav`
   align-items: center;
   justify-content: space-between;
   padding: 0;
-  li {
-    list-style: none;
+  ul {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li {
+      list-style: none;
+      display: inline;
+      margin-left: 2em;
+    }
+    a {
+      ${PrimaryColor}
+      ${PrimaryFont}
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 20px;
+    }
   }
 `;
 
-const NavbarSearch = styled.div``;
+// const NavbarSearch = styled.div``;
 
 const NavbarMenu = styled.div``;
 
@@ -41,9 +57,9 @@ const Navbar = () => {
       <Link to="" className="Navbar-Logo">
         Logo
       </Link>
-      <NavbarSearch>
+      {/* <NavbarSearch>
         <input type="text" placeholder="Search"></input>
-      </NavbarSearch>
+      </NavbarSearch> */}
       <NavbarMenu>
         <ul
           className={Mobile ? "Nav-Links-Mobile" : "Nav-Links"}
@@ -59,18 +75,26 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              to="/Book"
+              to="/Service"
               className={"underline" + (url === "/" ? " active" : "")}
             >
-              Book
+              Service
             </Link>
           </li>
           <li>
             <Link
-              to="/Manage"
+              to="/About Us"
               className={"underline" + (url === "/" ? " active" : "")}
             >
-              Manage
+              About us
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/Contact"
+              className={"underline" + (url === "/" ? " active" : "")}
+            >
+              Contact
             </Link>
           </li>
         </ul>
