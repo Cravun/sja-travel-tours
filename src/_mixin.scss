@@ -1,53 +1,53 @@
-@mixin Mobile-1 {
-  @media (max-width: 360px) and (min-height: 640px) {
-    @content;
-  }
-}
-@mixin IphoneSE {
-  @media (max-width: 360px) and (min-height: 667px) {
-    @content;
-  }
-}
+// @mixin Mobile-1 {
+//   @media (max-width: 360px) and (min-height: 640px) {
+//     @content;
+//   }
+// }
+// @mixin IphoneSE {
+//   @media (max-width: 360px) and (min-height: 667px) {
+//     @content;
+//   }
+// }
 
-@mixin Mobile-3 {
-  @media (max-width: 375px) and (min-height: 720px) {
-    @content;
-  }
-}
+// @mixin Mobile-3 {
+//   @media (max-width: 375px) and (min-height: 720px) {
+//     @content;
+//   }
+// }
 
-@mixin Iphone-x {
-  @media (max-width: 411px) and (min-height: 731px) {
-    @content;
-  }
-}
-@mixin Pixel-2 {
-  @media (max-width: 411px) and (min-height: 731px) {
-    @content;
-  }
-}
-@mixin Ipad-Mini {
-  @media (max-width: 768px) and (min-height: 1024px) {
-    @content;
-  }
-}
-@mixin iMac {
-  @media (max-width: 1280px) {
-    @content;
-  }
-}
-@mixin Laptop {
-  @media (max-width: 1366px) and (min-height: 768) {
-    @content;
-  }
-}
+// @mixin Iphone-x {
+//   @media (max-width: 411px) and (min-height: 731px) {
+//     @content;
+//   }
+// }
+// @mixin Pixel-2 {
+//   @media (max-width: 411px) and (min-height: 731px) {
+//     @content;
+//   }
+// }
+// @mixin Ipad-Mini {
+//   @media (max-width: 768px) and (min-height: 1024px) {
+//     @content;
+//   }
+// }
+// @mixin iMac {
+//   @media (max-width: 1280px) {
+//     @content;
+//   }
+// }
+// @mixin Laptop {
+//   @media (max-width: 1366px) and (min-height: 768) {
+//     @content;
+//   }
+// }
 
-@mixin fullHD {
-  @media (max-width: 1920px) {
-    @content;
-  }
-}
-@mixin twoKHD {
-  @media (min-width: 2160px) {
-    @content;
-  }
-}
+// @mixin fullHD {
+//   @media (max-width: 1920px) {
+//     @content;
+//   }
+// }
+// @mixin twoKHD {
+//   @media (min-width: 2160px) {
+//     @content;
+//   }
+// }

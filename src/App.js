@@ -9,6 +9,8 @@ import Manage from "./Pages/Manage/Manage";
 import Service from "./Pages/Service/Service";
 import About from "./Pages/About us/AboutUs";
 
+// Styled
+
 const App = () => {
   return (
     <Router>

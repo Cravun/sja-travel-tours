@@ -1,10 +1,11 @@
-import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Icon, Cross } from "./Hamburger";
 
 // === Styled ===
-import { PrimaryFont, GlobalStyles, PrimaryColor } from "../../Global";
+import { device } from "../../MediaQuery";
+import styled from "styled-components";
+import { GlobalStyles, PrimaryColor } from "../../Global";
 
 const Navigation = styled.nav`
   width: 100%;
@@ -24,7 +25,6 @@ const Navigation = styled.nav`
     }
     a {
       ${PrimaryColor}
-      ${PrimaryFont}
       font-weight: 700;
       text-decoration: none;
       font-size: 20px;
@@ -34,7 +34,10 @@ const Navigation = styled.nav`
 
 // const NavbarSearch = styled.div``;
 
-const NavbarMenu = styled.div``;
+const NavbarMenu = styled.div`
+  width: 80vw;
+  height: 60%;
+`;
 
 const MobileNavigation = styled.div`
   button {
@@ -53,60 +56,63 @@ const Navbar = () => {
   }, [location]);
 
   return (
-    <Navigation>
-      <Link to="" className="Navbar-Logo">
-        Logo
-      </Link>
-      {/* <NavbarSearch>
-        <input type="text" placeholder="Search"></input>
-      </NavbarSearch> */}
-      <NavbarMenu>
-        <ul
-          className={Mobile ? "Nav-Links-Mobile" : "Nav-Links"}
-          onClick={() => setMobile(false)}
-        >
-          <li>
-            <Link
-              to="/"
-              className={"underline" + (url === "/" ? " active" : "")}
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/Service"
-              className={"underline" + (url === "/" ? " active" : "")}
-            >
-              Service
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/About Us"
-              className={"underline" + (url === "/" ? " active" : "")}
-            >
-              About us
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/Contact"
-              className={"underline" + (url === "/" ? " active" : "")}
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </NavbarMenu>
+    <>
+      <GlobalStyles />
+      <Navigation>
+        <Link to="" className="Navbar-Logo">
+          Logo
+        </Link>
+        {/* <NavbarSearch>
+    <input type="text" placeholder="Search"></input>
+  </NavbarSearch> */}
+        <NavbarMenu>
+          <ul
+            className={Mobile ? "Nav-Links-Mobile" : "Nav-Links"}
+            onClick={() => setMobile(false)}
+          >
+            <li>
+              <Link
+                to="/"
+                className={"underline" + (url === "/" ? " active" : "")}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/Service"
+                className={"underline" + (url === "/" ? " active" : "")}
+              >
+                Service
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/About Us"
+                className={"underline" + (url === "/" ? " active" : "")}
+              >
+                About us
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/Contact"
+                className={"underline" + (url === "/" ? " active" : "")}
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </NavbarMenu>
 
-      {/*==== Mobile Navigation ====*/}
-      <MobileNavigation>
-        <button onClick={() => setMobile(!Mobile)}>
-          {Mobile ? <Cross /> : <Icon />}
-        </button>
-      </MobileNavigation>
-    </Navigation>
+        {/*==== Mobile Navigation ====*/}
+        <MobileNavigation>
+          <button onClick={() => setMobile(!Mobile)}>
+            {Mobile ? <Cross /> : <Icon />}
+          </button>
+        </MobileNavigation>
+      </Navigation>
+    </>
   );
 };
 export default Navbar;
