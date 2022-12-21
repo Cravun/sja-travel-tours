@@ -5,9 +5,9 @@ import "./App.scss";
 // === Components ===
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Pages/Home/Home";
-import Manage from "./Pages/Manage/Manage";
 import Service from "./Pages/Service/Service";
 import About from "./Pages/About us/AboutUs";
+import Contact from "./Pages/Contact/Contact";
 
 // Styled
 
@@ -17,9 +17,9 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/Login" element={<Manage />} />
+        <Route exact path="/Contact" element={<Contact />} />
         <Route exact path="/Service" element={<Service />} />
-        <Route exact path="/About Us" element={<About />} />
+        <Route exact path="/AboutUs" element={<About />} />
       </Routes>
     </Router>
   );

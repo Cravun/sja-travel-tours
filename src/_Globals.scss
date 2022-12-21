@@ -1,5 +1,10 @@
-// @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
-// $PrimaryColor: rgb(0, 0, 0);
-// $SecondColor: rgb(255, 204, 52);
-// $ThirdColor: rgb(229, 20, 0);
+$PrimaryColor: rgb(0, 0, 0);
+$SecondColor: rgb(255, 204, 52);
+$ThirdColor: rgb(229, 20, 0);
+
+@mixin PrimaryFont {
+  font-family: "Inter";
+  font-style: normal;
+}
