@@ -26,7 +26,7 @@ const Container = styled.div`
   }
   ${"" /* 425px */}
   @media ${device.mobileL} {
-    top: 10%;
+    top: 8%;
   }
   a {
     display: flex;
@@ -45,10 +45,17 @@ const Container = styled.div`
     letter-spacing: normal;
     color: ${PrimaryColor};
     font-size: 1.4rem;
+    ${"" /* 425px */}
     @media ${device.mobileL} {
-      width: 180px;
-      height: 50px;
+      font-size: 1.2rem;
       top: 0.4em;
+    }
+    @media ${device.mobileM} {
+      font-size: 1rem;
+    }
+    @media ${device.mobileS} {
+      font-size: 0.9rem;
+      height: 40px;
     }
     &:hover {
       background: linear-gradient(
@@ -95,11 +102,17 @@ const Heading = styled.h1`
       @media ${device.surfaceDuo} {
         font-size: 2rem;
         padding: 0;
-        top: 20%;
+        top: 9%;
       }
       ${"" /* 425px */}
       @media ${device.mobileL} {
         font-size: 1.6rem;
+      }
+      @media ${device.mobileM} {
+        font-size: 1.4rem;
+      }
+      @media ${device.mobileS} {
+        font-size: 1.2rem;
       }
     }
   }

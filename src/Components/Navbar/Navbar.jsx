@@ -1,6 +1,6 @@
 import "./styles/scss/navbar.scss";
 import { useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Icon, Cross } from "./Hamburger";
 import { NavLink } from "react-router-dom";
 
@@ -17,9 +17,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <NavLink to="" className="Navbar-Logo">
-        Logo
-      </NavLink>
+      <div className="Logo"></div>
       <div className="Navbar_Menu">
         <ul
           className={Mobile ? "Nav-Links-Mobile" : "Nav-Links"}
