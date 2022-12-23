@@ -1,20 +1,17 @@
 import About_Hero from "../../assets/png/About_Hero.jpg";
 
-import styled from "styled-components";
+// === Styled ===
+import { Hero, Heading, Container } from "../Home/HomeHero";
 
-const Hero = styled.div`
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-`;
 export const AboutHero = () => {
   return (
     <>
       <Hero>
         <img alt="Home-Hero" src={About_Hero} />
       </Hero>
+      <Container>
+        <Heading>Your Journey Your Story</Heading>
+      </Container>
     </>
   );
 };

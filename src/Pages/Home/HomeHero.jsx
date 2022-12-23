@@ -5,7 +5,7 @@ import { device } from "../../MediaQuery";
 import Home_Hero from "../../assets/png/Home_Hero.png";
 import { Button } from "@mui/material";
 
-const Container = styled.div`
+export const Container = styled.div`
   top: 26%;
   left: 10%;
   position: absolute;
@@ -69,7 +69,7 @@ const Container = styled.div`
   }
 `;
 
-const Hero = styled.div`
+export const Hero = styled.div`
   img {
     width: 100%;
     height: 100%;
@@ -77,7 +77,7 @@ const Hero = styled.div`
   }
 `;
 
-const Heading = styled.h1`
+export const Heading = styled.h1`
    {
      {
       background: ${SecondColor};
