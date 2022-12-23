@@ -6,7 +6,7 @@ import "./App.scss";
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Pages/Home/Home";
 import Service from "./Pages/Service/Service";
-import About from "./Pages/About us/AboutUs";
+import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
 
 // Styled

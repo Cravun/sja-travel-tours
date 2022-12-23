@@ -2,7 +2,7 @@
 import styled from "styled-components";
 import { PrimaryColor, SecondColor } from "../../Global";
 import { device } from "../../MediaQuery";
-import Home_BG from "../../assets/png/Home_BG.png";
+import Home_Hero from "../../assets/png/Home_Hero.png";
 import { Button } from "@mui/material";
 
 const Container = styled.div`
@@ -12,15 +12,19 @@ const Container = styled.div`
   @media ${device.laptop} {
     top: 16%;
   }
+  ${"" /* 820px */}
   @media ${device.tablet} {
     top: 8%;
   }
+  ${"" /* 768px */}
   @media ${device.ipadMini} {
     top: 10%;
   }
+  ${"" /* 680px */}
   @media ${device.smallTablet} {
     top: 10%;
   }
+  ${"" /* 425px */}
   @media ${device.mobileL} {
     top: 10%;
   }
@@ -34,12 +38,18 @@ const Container = styled.div`
     justify-content: center;
     margin: auto;
     text-transform: none;
+    border-radius: 50px;
     top: 1.2em;
     padding: 0.6rem 1.6rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: ${SecondColor};
+    font-weight: 600;
+    letter-spacing: normal;
+    color: ${PrimaryColor};
     font-size: 1.4rem;
+    @media ${device.mobileL} {
+      width: 180px;
+      height: 50px;
+      top: 0.4em;
+    }
     &:hover {
       background: linear-gradient(
         121.09deg,
@@ -63,7 +73,7 @@ const Hero = styled.div`
 const Heading = styled.h1`
    {
      {
-      background: black;
+      background: ${SecondColor};
       padding: 0;
       font-size: 3.2rem;
       text-align: center;
@@ -73,15 +83,23 @@ const Heading = styled.h1`
       padding-top: 2.5em;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      ${"" /* 768px */}
       @media ${device.ipadMini} {
         font-size: 2.4rem;
       }
+      ${"" /* 680px */}
       @media ${device.smallTablet} {
         font-size: 2.2rem;
       }
+      ${"" /* 540px */}
       @media ${device.surfaceDuo} {
         font-size: 2rem;
         padding: 0;
+        top: 20%;
+      }
+      ${"" /* 425px */}
+      @media ${device.mobileL} {
+        font-size: 1.6rem;
       }
     }
   }
@@ -91,7 +109,7 @@ export const HomeHero = () => {
   return (
     <>
       <Hero>
-        <img alt="Home-Hero" src={Home_BG} />
+        <img alt="Home-Hero" src={Home_Hero} />
       </Hero>
       <Container>
         <Heading>

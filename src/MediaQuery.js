@@ -2,7 +2,7 @@ const size = {
   mobileS: "320px",
   mobileM: "375px",
   mobileL: "425px",
-  surfaceDuo: "530px",
+  surfaceDuo: "540px",
   smallTablet: "680px",
   ipadMini: "768px",
   tablet: "820px",

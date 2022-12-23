@@ -2,13 +2,17 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyles = createGlobalStyle`
 `;
 
+// Black
 export const PrimaryColor = `
-color: rgb(0, 0, 0);
+ rgb(0, 0, 0);
 `;
 
+// White
 export const SecondColor = `
-color: #F9F9F9; `;
+ rgb(249, 249, 249); `;
+
+// Red
 export const ThirdColor = `
-color: rgb(229, 20, 0);`;
+ rgb(229, 20, 0);`;
 
 export default GlobalStyles;
