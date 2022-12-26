@@ -1,4 +1,17 @@
+import styled from "styled-components";
+
+// === Component
+import ServiceHero from "./ServiceHero";
+
+const Container = styled.div``;
+
 export const Service = () => {
-  return <h1>Hello Service </h1>;
+  return (
+    <>
+      <Container>
+        <ServiceHero />
+      </Container>
+    </>
+  );
 };
 export default Service;

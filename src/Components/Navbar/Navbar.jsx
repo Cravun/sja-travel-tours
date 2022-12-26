@@ -35,6 +35,7 @@ const Navbar = () => {
           })}
         </ul>
       </div>
+      <div className="Lining"></div>
 
       {/*==== Mobile Navigation ====*/}
       <div className="Mobile_Navigation">

@@ -9,8 +9,9 @@ export const Container = styled.div`
   top: 26%;
   left: 10%;
   position: absolute;
+  ${"" /* 1366px */}
   @media ${device.laptop} {
-    top: 16%;
+    top: 10%;
   }
   ${"" /* 820px */}
   @media ${device.tablet} {
@@ -18,7 +19,7 @@ export const Container = styled.div`
   }
   ${"" /* 768px */}
   @media ${device.ipadMini} {
-    top: 10%;
+    top: 4%;
   }
   ${"" /* 680px */}
   @media ${device.smallTablet} {
@@ -27,6 +28,9 @@ export const Container = styled.div`
   ${"" /* 425px */}
   @media ${device.mobileL} {
     top: 8%;
+  }
+  @media ${device.GalaxyFold} {
+    top: 10%;
   }
   a {
     display: flex;
@@ -56,6 +60,10 @@ export const Container = styled.div`
     @media ${device.mobileS} {
       font-size: 0.9rem;
       height: 40px;
+    }
+    @media ${device.GalaxyFold} {
+      font-size: 0.6rem;
+      height: 30px;
     }
     &:hover {
       background: linear-gradient(
@@ -113,6 +121,9 @@ export const Heading = styled.h1`
       }
       @media ${device.mobileS} {
         font-size: 1.2rem;
+      }
+      @media ${device.GalaxyFold} {
+        font-size: 1rem;
       }
     }
   }

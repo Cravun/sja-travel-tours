@@ -1,4 +1,5 @@
 const size = {
+  GalaxyFold: "280px",
   mobileS: "320px",
   mobileM: "375px",
   mobileL: "425px",
@@ -12,6 +13,7 @@ const size = {
 };
 
 export const device = {
+  GalaxyFold: `(max-width: ${size.GalaxyFold})`,
   mobileS: `(max-width: ${size.mobileS})`,
   mobileM: `(max-width: ${size.mobileM})`,
   mobileL: `(max-width: ${size.mobileL})`,

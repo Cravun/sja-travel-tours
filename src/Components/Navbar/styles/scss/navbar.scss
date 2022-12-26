@@ -41,7 +41,7 @@ nav {
         line-height: 4rem;
         width: 100vw;
         height: 100vh;
-        background-color: yellow;
+        background: GREEN;
         z-index: 4;
       }
     }
@@ -69,8 +69,16 @@ nav {
         color: $PrimaryColor;
         text-decoration: none;
         font-size: 20px;
+        @include Ipad-Mini {
+          font-size: 30px;
+          line-height: 4em;
+          color: $FourthColor;
+        }
         i {
           padding-right: 10px;
+          @include Ipad-Mini {
+            color: $PrimaryColor;
+          }
         }
         &:hover {
           color: $ThirdColor;
@@ -79,10 +87,14 @@ nav {
         }
       }
       &:hover {
-        border: 1px solid green;
-        width: auto;
-        border-radius: 20px;
       }
+    }
+    .lining {
+      position: absolute;
+      bottom: 0;
+      height: 6px;
+      width: 100%;
+      background: #fbaf39;
     }
   }
 
