@@ -3,7 +3,7 @@ import Service_Hero from "../../assets/png/Service_Hero.jpg";
 // === Styled ===
 import { Hero, Heading, Container } from "../Home/HomeHero";
 
-export const ServiceHero = () => {
+const ServiceHero = () => {
   return (
     <>
       <Hero>

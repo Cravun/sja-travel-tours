@@ -129,7 +129,7 @@ export const Heading = styled.h1`
   }
 `;
 
-export const HomeHero = () => {
+const HomeHero = () => {
   return (
     <>
       <Hero>

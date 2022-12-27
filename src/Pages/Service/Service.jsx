@@ -5,7 +5,7 @@ import ServiceHero from "./ServiceHero";
 
 const Container = styled.div``;
 
-export const Service = () => {
+const Service = () => {
   return (
     <>
       <Container>

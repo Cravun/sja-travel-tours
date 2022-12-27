@@ -27,7 +27,7 @@ const Container = styled.div`
   }
 `;
 
-export const ContactHero = () => {
+const ContactHero = () => {
   return (
     <>
       <Hero>

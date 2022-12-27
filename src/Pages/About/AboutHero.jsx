@@ -27,7 +27,7 @@ const Container = styled.div`
   }
 `;
 
-export const AboutHero = () => {
+const AboutHero = () => {
   return (
     <>
       <Hero>

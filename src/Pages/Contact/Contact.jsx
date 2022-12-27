@@ -1,6 +1,6 @@
 import ContactHero from "./ContactHero";
 
-export const Contact = () => {
+const Contact = () => {
   return (
     <>
       <ContactHero />
