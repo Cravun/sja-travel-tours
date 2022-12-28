@@ -1,6 +1,6 @@
 // === Styled ===
 import styled from "styled-components";
-import { PrimaryColor, SecondColor } from "../../Global";
+import { FourthColor, PrimaryColor, SecondColor } from "../../Global";
 import { device } from "../../MediaQuery";
 import Home_Hero from "../../assets/png/Home_Hero.png";
 import { Button } from "@mui/material";
@@ -42,9 +42,8 @@ export const Container = styled.div`
     justify-content: center;
     margin: auto;
     text-transform: none;
-    border-radius: 50px;
     top: 1.2em;
-    padding: 0.6rem 1.6rem;
+    padding: 0.4rem 1.4rem;
     font-weight: 600;
     letter-spacing: normal;
     color: ${PrimaryColor};
@@ -88,7 +87,7 @@ export const Hero = styled.div`
 export const Heading = styled.h1`
    {
      {
-      background: ${SecondColor};
+      background: ${FourthColor};
       padding: 0;
       font-size: 3.2rem;
       text-align: center;
