@@ -6,6 +6,7 @@ import { device } from "../../MediaQuery";
 import { Hero, Heading } from "../Home/HomeHero";
 
 const Container = styled.div`
+  z-index: -1;
   top: 30%;
   left: 10%;
   position: absolute;
@@ -24,6 +25,9 @@ const Container = styled.div`
   ${"" /* 680px */}
   @media ${device.smallTablet} {
     top: 22%%;
+  }
+  @media ${device.GalaxyFold} {
+    top: 6%;
   }
 `;
 

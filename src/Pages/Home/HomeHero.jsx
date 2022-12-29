@@ -6,6 +6,7 @@ import Home_Hero from "../../assets/png/Home_Hero.png";
 import { Button } from "@mui/material";
 
 export const Container = styled.div`
+  z-index: -1;
   top: 26%;
   left: 10%;
   position: absolute;
@@ -27,10 +28,15 @@ export const Container = styled.div`
   }
   ${"" /* 425px */}
   @media ${device.mobileL} {
-    top: 8%;
+    top: 0%;
   }
+  ${"" /* 540 */}
+  @media ${device.surfaceDuo} {
+    top: 0%;
+  }
+  ${"" /* 280 */}
   @media ${device.GalaxyFold} {
-    top: 10%;
+    top: 4%;
   }
   a {
     display: flex;
@@ -81,6 +87,8 @@ export const Hero = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: -2;
+    position: relative;
   }
 `;
 
@@ -88,6 +96,9 @@ export const Heading = styled.h1`
    {
      {
       background: ${FourthColor};
+      position: static
+      
+      z-index: 3;
       padding: 0;
       font-size: 3.2rem;
       text-align: center;
@@ -105,7 +116,8 @@ export const Heading = styled.h1`
       @media ${device.smallTablet} {
         font-size: 2.2rem;
       }
-      ${"" /* 540px */}
+      ${"" /* 540px */}+
+                                                                  
       @media ${device.surfaceDuo} {
         font-size: 2rem;
         padding: 0;

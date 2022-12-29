@@ -6,16 +6,17 @@ import { device } from "../../MediaQuery";
 import { Hero, Heading } from "../Home/HomeHero";
 
 const Container = styled.div`
+  z-index: -1;
   top: 40%;
   left: 10%;
   position: absolute;
   ${"" /* 1366px */}
   @media ${device.laptop} {
-    top: 35%;
+    top: 22%;
   }
   ${"" /* 820px */}
   @media ${device.tablet} {
-    top: 20%%;
+    top: 20%;
   }
   ${"" /* 768px */}
   @media ${device.ipadMini} {
@@ -24,6 +25,9 @@ const Container = styled.div`
   ${"" /* 680px */}
   @media ${device.smallTablet} {
     top: 22%%;
+  }
+  @media ${device.GalaxyFold} {
+    top: 6%;
   }
 `;
 

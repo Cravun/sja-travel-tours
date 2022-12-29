@@ -20,6 +20,9 @@ nav {
   padding: 0;
   @include Ipad-Mini {
     height: 0;
+    position: fixed;
+    background: none;
+    filter: none;
   }
 
   // ==================
@@ -44,7 +47,7 @@ nav {
       @include Ipad-Mini {
         margin: 0;
         display: block;
-        position: absolute;
+        position: fixed;
         transition: all 0.5s ease-in-out;
         line-height: 4rem;
         width: 100vw;
@@ -114,7 +117,7 @@ nav {
     display: none;
     @include Ipad-Mini {
       position: fixed;
-      top: 5%;
+      top: 2em;
       right: 5%;
       display: block;
       z-index: 4;
