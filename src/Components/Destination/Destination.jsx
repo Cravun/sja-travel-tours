@@ -203,27 +203,27 @@ const Destination = () => {
       </Container>
 
       <Destination1>
-        <Heading>
-          {DestinationData.map((item) => {
-            return (
-              <>
+        {DestinationData.map((data) => {
+          return (
+            <>
+              <Heading>
                 <Title>
-                  <h1>{item.title}</h1>
+                  <h1>{data.title}</h1>
                 </Title>
                 <Description>
-                  <p>{item.description}</p>
+                  <p>{data.description}</p>
                   <Button className="Button" variant="contained">
-                    See More
+                    {data.button}
                   </Button>
-                  <Image1>
-                    <img alt="Taal Lake" src={Taal1}></img>
-                    <img alt="Taal Lake" src={Taal2}></img>
-                  </Image1>
                 </Description>
-              </>
-            );
-          })}
-        </Heading>
+              </Heading>
+              <Image1>
+                <img alt="Taal Lake" src={data.thumbnail1}></img>
+                <img alt="Taal Lake" src={data.thumbnail2}></img>
+              </Image1>
+            </>
+          );
+        })}
       </Destination1>
     </>
   );

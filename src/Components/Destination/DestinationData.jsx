@@ -1,3 +1,6 @@
+const TaalPicture1 = require("../../assets/png/Taal/Taal1.jpg");
+const TaalPicture2 = require("../../assets/png/Taal/Taal2.jpg");
+
 export const DestinationData = [
   {
     title: "Taal Lake, Batangas",
@@ -12,8 +15,9 @@ export const DestinationData = [
       lake, you can board a Filipino-made motorized outrigger boat and
       enjoy a 30-minute ride across the lake to the village of Talisay on
       Volcano Island.`,
-    thumnail1: "",
-    thumnail2: "",
+    button: "See More",
+    thumbnail1: TaalPicture1,
+    thumbnail2: TaalPicture2,
   },
 
   {
@@ -29,7 +33,8 @@ export const DestinationData = [
       lake, you can board a Filipino-made motorized outrigger boat and
       enjoy a 30-minute ride across the lake to the village of Talisay on
       Volcano Island.`,
-    thumnail1: "",
-    thumnail2: "",
+    button: "See More",
+    thumbnail1: TaalPicture1,
+    thumbnail2: TaalPicture2,
   },
 ];
