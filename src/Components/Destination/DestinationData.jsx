@@ -12,7 +12,8 @@ export const DestinationData = [
       lake, you can board a Filipino-made motorized outrigger boat and
       enjoy a 30-minute ride across the lake to the village of Talisay on
       Volcano Island.`,
-    thumnail: "",
+    thumnail1: "",
+    thumnail2: "",
   },
 
   {
@@ -28,6 +29,7 @@ export const DestinationData = [
       lake, you can board a Filipino-made motorized outrigger boat and
       enjoy a 30-minute ride across the lake to the village of Talisay on
       Volcano Island.`,
-    thumnail: "",
+    thumnail1: "",
+    thumnail2: "",
   },
 ];
