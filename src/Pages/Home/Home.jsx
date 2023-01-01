@@ -3,7 +3,7 @@ import { device } from "../../MediaQuery";
 import styled from "styled-components";
 import HomeHero from "./HomeHero";
 import Destination from "../../Components/Destination/Destination";
-
+import Footer from "../../Components/Footer/Footer";
 const Container = styled.div``;
 
 const Home = () => {
@@ -11,6 +11,7 @@ const Home = () => {
     <Container>
       <HomeHero />
       <Destination />
+      <Footer />
     </Container>
   );
 };

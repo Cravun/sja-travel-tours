@@ -2,9 +2,10 @@
 import styled from "styled-components";
 import { device } from "../../MediaQuery";
 import { Button } from "@mui/material";
+
 // === Images ===
-import Taal1 from "../../assets/png/Taal/Taal1.jpg";
-import Taal2 from "../../assets/png/Taal/Taal2.jpg";
+// import Taal1 from "../../assets/png/Taal/Taal1.jpg";
+// import Taal2 from "../../assets/png/Taal/Taal2.jpg";
 import { FifthColor, FourthColor } from "../../Global";
 // === Components ===
 import { DestinationData } from "../Destination/DestinationData";
@@ -129,7 +130,6 @@ const Image1 = styled.div`
     rgba(255, 255, 255, 0) 103.28%
   );
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  backdrop-filter: blur(22px);
   display: inline-flex;
   ${"" /* 1024px */}
   @media ${device.NestHub} {
@@ -218,8 +218,8 @@ const Destination = () => {
                 </Description>
               </Heading>
               <Image1>
-                <img alt="Taal Lake" src={data.thumbnail1}></img>
-                <img alt="Taal Lake" src={data.thumbnail2}></img>
+                <img alt={data.ALT} src={data.thumbnail1}></img>
+                <img alt={data.ALT} src={data.thumbnail2}></img>
               </Image1>
             </>
           );
