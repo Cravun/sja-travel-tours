@@ -1,10 +1,63 @@
-import "./FooterStyles.css";
+import styled from "styled-components";
+import { device } from "../../MediaQuery";
+
+const Container = styled.div`
+  background: #000;
+  color: #fff;
+  padding: 4rem 6rem;
+  @media ${device.BreakPoint} {
+    padding: 4rem 2rem;
+  }
+`;
+
+const Top = styled.div`
+  display: flex;
+  align-items: center;
+  text-align: start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  i {
+    color: #fff;
+    font-size: 2rem;
+    margin-left: 1rem;
+    &:hover {
+      color: #01959a;
+    }
+    @media ${device.BreakPoint} {
+      margin: 1rem 1rem 0 0;
+    }
+  }
+`;
+const Bottom = styled.div`
+  padding-top: 2rem;
+  text-align: start;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  div {
+    display: flex;
+    flex-direction: column;
+    @media ${device.BreakPoint} {
+      width: 50%;
+    }
+  }
+  h4 {
+    font-size: 1.3rem;
+    padding: 1rem 0 0.8rem 0;
+  }
+  a {
+    text-decoration: none;
+    color: #fafafa;
+    padding-bottom: 0.4rem;
+    font-size: 1.1rem;
+  }
+`;
 
 const Footer = () => {
   return (
     <>
-      <div className="footer">
-        <div className="top">
+      <Container>
+        <Top>
           <div>
             <h1>Sja Travel & Tours</h1>
             <p>Choose your favourite destination.</p>
@@ -17,9 +70,9 @@ const Footer = () => {
               <i className="fa-brands fa-instagram-square"></i>
             </a>
           </div>
-        </div>
+        </Top>
 
-        <div className="bottom">
+        <Bottom>
           <div>
             <h4>Project</h4>
             <a href="https://fontawesome.com/">Changelog</a>
@@ -46,8 +99,8 @@ const Footer = () => {
             <a href="https://fontawesome.com/">Privacy Policy</a>
             <a href="https://fontawesome.com/">License</a>
           </div>
-        </div>
-      </div>
+        </Bottom>
+      </Container>
     </>
   );
 };

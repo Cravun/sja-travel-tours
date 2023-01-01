@@ -1,13 +1,11 @@
+import { useState } from "react";
 // === Styled ===
 import styled from "styled-components";
 import { device } from "../../MediaQuery";
 import { Button } from "@mui/material";
-
-// === Images ===
-// import Taal1 from "../../assets/png/Taal/Taal1.jpg";
-// import Taal2 from "../../assets/png/Taal/Taal2.jpg";
 import { FifthColor, FourthColor } from "../../Global";
 // === Components ===
+import DestionationForm from "./DestinationForm";
 import { DestinationData } from "../Destination/DestinationData";
 
 const Container = styled.div`
@@ -193,6 +191,13 @@ const Description = styled.div`
 `;
 
 const Destination = () => {
+  const [formPopUp, SetFormPopup] = useState(false);
+  const [FormContent, SetupForm] = useState([]);
+  const [FormToggle, SetupFormToggle] = useState(false);
+  const FormPopUp = (DestinationData) => {
+    SetupForm([DestinationData]);
+    SetupFormToggle(!FormToggle);
+  };
   return (
     <>
       <Container>
@@ -212,9 +217,17 @@ const Destination = () => {
                 </Title>
                 <Description>
                   <p>{data.description}</p>
-                  <Button className="Button" variant="contained">
+                  <Button
+                    className="Button"
+                    variant="contained"
+                    onClick={() => SetFormPopup(true)}
+                  >
                     {data.button}
                   </Button>
+                  <DestionationForm
+                    trigger={formPopUp}
+                    setTrigger={SetFormPopup}
+                  />
                 </Description>
               </Heading>
               <Image1>
