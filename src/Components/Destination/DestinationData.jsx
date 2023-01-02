@@ -2,6 +2,7 @@ const TaalPicture1 = require("../../assets/png/Taal/Taal1.jpg");
 const TaalPicture2 = require("../../assets/png/Taal/Taal2.jpg");
 
 const BaguioPicture1 = require("../../assets/png/Baguio/Baguio1.jpg");
+const BaguioPicture2 = require("../../assets/png/Baguio/Baguio2.jpg");
 
 export const DestinationData = [
   {
@@ -17,21 +18,21 @@ export const DestinationData = [
       lake, you can board a Filipino-made motorized outrigger boat and
       enjoy a 30-minute ride across the lake to the village of Talisay on
       Volcano Island.`,
-    button: "See More",
+    button: "Book now",
     ALT: "Taal Lake Picture",
     thumbnail1: TaalPicture1,
     thumbnail2: TaalPicture2,
   },
 
   {
-    title: "Baguio Benguet Tour",
+    title: "Benguet, Baguio",
     description:
       "" +
       `Baguio is the top destination to go to if you want to take a break from the tropical heat in the lowlands. With average temperatures ranging from 15-23°C, 
        the city rarely experiences temperatures higher than 26°C even during the warmest parts of the year. 
        Because of this climate, Baguio is also home to beautiful plants that wouldn’t usually survive elsewhere in the county. Also nicknamed the City of Pines, 
        you’ll be in for a treat with all the beautiful flowers and lush vegetation as you enter the vicinity. It will truly feel as if you’re entering a different world.`,
-    button: "See More",
+    button: "Book now",
     Itinerary: {
       Standard_Package: {
         1: "Teachers Camp",
@@ -48,6 +49,6 @@ export const DestinationData = [
     },
     ALT: "Taal Lake Picture",
     thumbnail1: BaguioPicture1,
-    thumbnail2: TaalPicture2,
+    thumbnail2: BaguioPicture2,
   },
 ];
