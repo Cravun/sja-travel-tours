@@ -5,6 +5,7 @@ import HomeHero from "./HomeHero";
 import Destination from "../../Components/Destination/Destination";
 import Footer from "../../Components/Footer/Footer";
 import DestionationForm from "../../Components/Destination/DestinationForm";
+import { Trip } from "../../Components/Trip/Trip";
 const Container = styled.div``;
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
       <HomeHero />
       <Destination />
       <DestionationForm />
+      <Trip />
       <Footer />
     </Container>
   );

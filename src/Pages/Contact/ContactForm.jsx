@@ -36,7 +36,7 @@ const Container = styled.div`
     padding: 1rem;
     margin-bottom: 2rem;
     border-radius: 0.3rem;
-    border: 1px solid #250e0e;
+    border: 1px solid #808080;
   }
   .Button {
     font-size: 1.4rem;

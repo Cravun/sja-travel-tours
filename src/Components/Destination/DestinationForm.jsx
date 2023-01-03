@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Button } from "@mui/material";
 import { DestinationDataBatangas } from "./DestinationDataBatangas";
 
-const Container = styled.div`
+export const Container = styled.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -12,7 +12,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
 `;
-const Form = styled.div`
+export const Form = styled.div`
   position: relative;
   padding: 32px;
   border-radius: 13px;
@@ -25,15 +25,20 @@ const Form = styled.div`
   margin: auto;
   form {
     input {
+      margin-right: 1em;
       height: 2rem;
       padding: 0 1rem;
       margin-bottom: 2rem;
       border-radius: 0.3rem;
       border: 1px solid #808080;
+      font-size: 16px;
     }
     .Submit_Button {
-      width: 220px;
+      width: 50%;
       background: rgb(73, 138, 244);
+    }
+    textarea {
+      border: 1px solid #808080;
     }
   }
   .Close {
@@ -58,7 +63,9 @@ export const DestionationForm = (props) => {
                 <h3>Travel Form</h3>
                 <h3>{data.title}</h3>
                 <form>
-                  <input placeholder="Name" />
+                  <input placeholder="First Name:" />
+                  <input placeholder="Last Name:" />
+                  <input placeholder="Family Name:" />
                   <br></br>
                   <input placeholder="Email" />
                   <br></br>
