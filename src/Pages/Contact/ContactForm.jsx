@@ -1,7 +1,12 @@
 import styled from "styled-components";
 import { device } from "../../MediaQuery";
-import { Button } from "@mui/material";
+import { Alert, Button } from "@mui/material";
 import { FourthColor, FifthColor } from "../../Global";
+import { useState } from "react";
+import { database } from "../../firebase";
+import { collection, addDoc } from "firebase/firestore";
+import Swal from "sweetalert2";
+import {} from "firebase/firestore";
 const Container = styled.div`
   margin: 4rem 6rem;
   color: #2a2a2a;
@@ -61,17 +66,80 @@ const Container = styled.div`
     }
   }
 `;
+
+console.log("Firebase initialized");
+
 export const ContactForm = () => {
+  const [Name, setName] = useState();
+  const [Email, setEmail] = useState();
+  const [Subject, setSubject] = useState();
+  const [Message, setMessage] = useState();
+
+  const usersCollectionRef = collection(database, "Contact");
+
+  const handleSubmit = () => {
+    addDoc(usersCollectionRef, {
+      Name: Name,
+      Email: Email,
+      Subject: Subject,
+      Message: Message,
+    })
+      .then(() => {
+        if (
+          !Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Form Submitted Succesfully!",
+            showCancelButton: false, // There won't be any cancel button
+            showConfirmButton: false, // There won't be any confirm button
+          }).then(() => {
+            document.location = "http://localhost:3000/Contact";
+          })
+        );
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
   return (
     <>
       <Container>
         <h1>Send a message to us!</h1>
         <form>
-          <input placeholder="Name" />
-          <input placeholder="Email" />
-          <input placeholder="Subject" />
-          <textarea placeholder="Message" rows="4"></textarea>
-          <Button className="Button" variant="contained">
+          <input
+            id="Name"
+            placeholder="Name"
+            value={Name}
+            onChange={(event) => {
+              setName(event.target.value);
+            }}
+          />
+          <input
+            id="Email"
+            placeholder="Email"
+            value={Email}
+            onChange={(event) => {
+              setEmail(event.target.value);
+            }}
+          />
+          <input
+            id="Subject"
+            placeholder="Subject"
+            value={Subject}
+            onChange={(event) => {
+              setSubject(event.target.value);
+            }}
+          />
+          <textarea
+            id="Message"
+            placeholder="Message"
+            rows="4"
+            value={Message}
+            onChange={(event) => {
+              setMessage(event.target.value);
+            }}
+          ></textarea>
+          <Button className="Button" variant="contained" onClick={handleSubmit}>
             Send Message
           </Button>
         </form>

@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import styled from "styled-components";
 import { DestinationDataBaguio } from "./DestionationDataBaguio";
-import { Container, Form } from "./DestinationForm";
+import { Container, Form } from "./DestinationBatangasForm";
 export const DestionationBaguioForm = (props) => {
   return props.trigger ? (
     <>
@@ -16,7 +16,7 @@ export const DestionationBaguioForm = (props) => {
                   <input placeholder="First Name:" />
                   <input placeholder="Last Name:" />
                   <input placeholder="Family Name:" />
-                  <input placeholder="Mobiler Number:" />
+                  <input placeholder="Mobile Number:" />
                   <br></br>
                   <input placeholder="Email" />
                   <br></br>

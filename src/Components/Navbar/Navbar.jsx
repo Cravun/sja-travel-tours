@@ -1,6 +1,6 @@
 import "./styles/scss/navbar.scss";
-import { useLocation } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+
+import React, { useState } from "react";
 import { Icon, Cross } from "./Hamburger";
 import { NavLink } from "react-router-dom";
 
@@ -8,12 +8,7 @@ import { NavLink } from "react-router-dom";
 import { MenuItems } from "./MenuItems";
 
 const Navbar = () => {
-  const location = useLocation();
   const [Mobile, setMobile] = useState(true);
-  const [url, setUrl] = useState(null);
-  useEffect(() => {
-    setUrl(location.pathname);
-  }, [location]);
 
   return (
     <nav>

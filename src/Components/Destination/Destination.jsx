@@ -5,10 +5,10 @@ import { device } from "../../MediaQuery";
 import { Button } from "@mui/material";
 import { FifthColor, FourthColor } from "../../Global";
 // === Components ===
-import DestionationForm from "./DestinationForm";
-import DestionationBaguio from "./DestionationBaguio";
+import DestionationForm from "./DestinationBatangasForm";
 
 import { DestinationDataBatangas } from "./DestinationDataBatangas";
+import DestinationDataBaguio from "./DestionationDataBaguio";
 
 export const Container = styled.div`
   text-align: center;
@@ -235,7 +235,38 @@ const Destination = () => {
           );
         })}
       </Destination1>
-      <DestionationBaguio />
+
+      <Destination1>
+        {DestinationDataBaguio.map((data) => {
+          return (
+            <>
+              <Heading>
+                <Title>
+                  <h1>{data.title}</h1>
+                </Title>
+                <Description>
+                  <p>{data.description}</p>
+                  <Button
+                    className="Button"
+                    variant="contained"
+                    onClick={() => SetFormPopup(true)}
+                  >
+                    {data.button}
+                  </Button>
+                  <DestionationForm
+                    trigger={formPopUp}
+                    setTrigger={SetFormPopup}
+                  />
+                </Description>
+              </Heading>
+              <Image1>
+                <img alt={data.ALT} src={data.thumbnail1}></img>
+                <img alt={data.ALT} src={data.thumbnail2}></img>
+              </Image1>
+            </>
+          );
+        })}
+      </Destination1>
     </>
   );
 };

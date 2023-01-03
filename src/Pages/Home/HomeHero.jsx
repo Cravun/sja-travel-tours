@@ -1,6 +1,6 @@
 // === Styled ===
 import styled from "styled-components";
-import { FourthColor, PrimaryColor, SecondColor } from "../../Global";
+import { FourthColor, PrimaryColor } from "../../Global";
 import { device } from "../../MediaQuery";
 import Home_Hero from "../../assets/png/Home_Hero.png";
 import { Button } from "@mui/material";
