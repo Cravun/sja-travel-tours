@@ -6,9 +6,11 @@ import { Button } from "@mui/material";
 import { FifthColor, FourthColor } from "../../Global";
 // === Components ===
 import DestionationForm from "./DestinationForm";
-import { DestinationData } from "../Destination/DestinationData";
+import DestionationBaguio from "./DestionationBaguio";
 
-const Container = styled.div`
+import { DestinationDataBatangas } from "./DestinationDataBatangas";
+
+export const Container = styled.div`
   text-align: center;
   line-height: 1rem;
   h1 {
@@ -52,7 +54,7 @@ const Container = styled.div`
   }
 `;
 
-const Heading = styled.div`
+export const Heading = styled.div`
   width: 100%;
   h2 {
     text-align: start;
@@ -98,7 +100,7 @@ const Heading = styled.div`
     }
   }
 `;
-const Destination1 = styled.div`
+export const Destination1 = styled.div`
   line-height: 1rem;
   margin: 4rem 6rem;
   display: grid;
@@ -114,7 +116,7 @@ const Destination1 = styled.div`
     display: block;
   }
 `;
-const Image1 = styled.div`
+export const Image1 = styled.div`
   z-index: -99;
   padding-bottom: 4em;
   position: relative;
@@ -185,19 +187,14 @@ const Image1 = styled.div`
   }
 `;
 
-const Title = styled.div``;
-const Description = styled.div`
+export const Title = styled.div``;
+export const Description = styled.div`
   padding-bottom: 2em;
 `;
 
 const Destination = () => {
   const [formPopUp, SetFormPopup] = useState(false);
-  const [FormContent, SetupForm] = useState([]);
-  const [FormToggle, SetupFormToggle] = useState(false);
-  const FormPopUp = (DestinationData) => {
-    SetupForm([DestinationData]);
-    SetupFormToggle(!FormToggle);
-  };
+
   return (
     <>
       <Container>
@@ -208,7 +205,7 @@ const Destination = () => {
       </Container>
 
       <Destination1>
-        {DestinationData.map((data) => {
+        {DestinationDataBatangas.map((data) => {
           return (
             <>
               <Heading>
@@ -238,6 +235,7 @@ const Destination = () => {
           );
         })}
       </Destination1>
+      <DestionationBaguio />
     </>
   );
 };

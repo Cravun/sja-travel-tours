@@ -1,6 +1,6 @@
-import styled from "styled-components";
 import { Button } from "@mui/material";
-import { DestinationDataBatangas } from "./DestinationDataBatangas";
+import styled from "styled-components";
+import { DestinationDataBaguio } from "./DestionationDataBaguio";
 
 const Container = styled.div`
   position: fixed;
@@ -47,16 +47,15 @@ const Form = styled.div`
   }
 `;
 
-export const DestionationForm = (props) => {
+export const DestionationBaguioForm = (props) => {
   return props.trigger ? (
     <>
       <Container>
         <Form>
-          {DestinationDataBatangas.map((data) => {
+          {DestinationDataBaguio.map((data) => {
             return (
               <>
-                <h3>Travel Form</h3>
-                <h3>{data.title}</h3>
+                <h3>{"Travel Form for " + data.title}</h3>
                 <form>
                   <input placeholder="Name" />
                   <br></br>
@@ -87,5 +86,3 @@ export const DestionationForm = (props) => {
     ""
   );
 };
-
-export default DestionationForm;
