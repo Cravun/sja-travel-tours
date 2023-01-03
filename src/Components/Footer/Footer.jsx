@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { device } from "../../MediaQuery";
 
 const Container = styled.div`
-  background: #000;
+  background: #ffcc34;
   color: #fff;
   padding: 4rem 6rem;
   @media ${device.BreakPoint} {
@@ -16,12 +16,18 @@ const Top = styled.div`
   text-align: start;
   justify-content: space-between;
   flex-wrap: wrap;
+  h1 {
+    color: white;
+  }
+  p {
+    color: white;
+  }
   i {
     color: #fff;
     font-size: 2rem;
     margin-left: 1rem;
     &:hover {
-      color: #01959a;
+      color: black;
     }
     @media ${device.BreakPoint} {
       margin: 1rem 1rem 0 0;

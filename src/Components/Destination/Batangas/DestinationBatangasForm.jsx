@@ -65,7 +65,31 @@ export const DestionationBatangasForm = (props) => {
 
   const usersCollectionRef = collection(database, "Batangas Travel Form");
 
-  const handleSubmit = () => {};
+  const handleSubmit = () => {
+    addDoc(usersCollectionRef, {
+      FirstName: FirstName,
+      MiddleName: MiddleName,
+      LastName: LastName,
+      PhoneNumber: PhoneNumber,
+      Location: Location,
+    })
+      .then(() => {
+        if (
+          !Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Form Submitted Succesfully!",
+            showCancelButton: false, // There won't be any cancel button
+            showConfirmButton: false, // There won't be any confirm button
+          }).then(() => {
+            document.location = "http://localhost:3000/";
+          })
+        );
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  };
 
   return props.trigger ? (
     <>
@@ -81,27 +105,42 @@ export const DestionationBatangasForm = (props) => {
                     id="FirstName"
                     placeholder="First Name:"
                     value={FirstName}
+                    onChange={(event) => {
+                      setFirstName(event.target.value);
+                    }}
                   />
                   <input
                     id="MiddleName"
                     placeholder="Middle Name:"
                     value={MiddleName}
+                    onChange={(event) => {
+                      setMiddleName(event.target.value);
+                    }}
                   />
                   <input
                     id="LastName"
                     placeholder="Last Name:"
                     value={LastName}
+                    onChange={(event) => {
+                      setLastName(event.target.value);
+                    }}
                   />
                   <input
                     id="MobileNumber"
                     placeholder="Mobile Number: "
                     value={PhoneNumber}
+                    onChange={(event) => {
+                      setPhoneNumber(event.target.value);
+                    }}
                   />
                   <br></br>
                   <input
                     id="Location"
                     placeholder="Location of Pickup: "
                     value={Location}
+                    onChange={(event) => {
+                      setLocation(event.target.value);
+                    }}
                   />
                   <br></br>
                   <Button

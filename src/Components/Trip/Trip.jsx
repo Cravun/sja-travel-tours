@@ -1,6 +1,6 @@
 import TripData from "./TripData";
 import { device } from "../../MediaQuery";
-import Trip1 from "../../assets/png/5.jpg";
+import Mactan from "../../assets/png/Mactan.jpg";
 import Trip2 from "../../assets/png/6.jpg";
 import Trip3 from "../../assets/png/8.jpg";
 import styled from "styled-components";
@@ -33,8 +33,8 @@ export const Trip = () => {
       <p>You can discover unique destinations using Google Maps.</p>
       <TripCard>
         <TripData
-          image={Trip1}
-          heading="Trip in Indonesia"
+          image={Mactan}
+          heading="Trip in Mactan, Cebu"
           text="Indonesia, officially the Republic of Indonesia, is a country in
               Southeast Asia and Oceania between the Indian and Pacific oceans. It
               consists of over 17,000 islands, including Sumatra, Java, Sulawesi,
