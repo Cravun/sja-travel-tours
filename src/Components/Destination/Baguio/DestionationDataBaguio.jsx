@@ -1,5 +1,5 @@
-const BaguioPicture1 = require("../../assets/png/Baguio/Baguio1.jpg");
-const BaguioPicture2 = require("../../assets/png/Baguio/Baguio2.jpg");
+const BaguioPicture1 = require("../../../assets/png/Baguio/Baguio1.jpg");
+const BaguioPicture2 = require("../../../assets/png/Baguio/Baguio2.jpg");
 
 export const DestinationDataBaguio = [
   {

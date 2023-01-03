@@ -12,7 +12,6 @@ const Home = () => {
     <Container>
       <HomeHero />
       <Destination />
-
       <Trip />
       <Footer />
     </Container>

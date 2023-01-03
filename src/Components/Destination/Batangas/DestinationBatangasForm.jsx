@@ -1,8 +1,12 @@
 import styled from "styled-components";
 import { Button } from "@mui/material";
 import { DestinationDataBatangas } from "./DestinationDataBatangas";
+import { useState } from "react";
+import { database } from "../../../firebase";
+import { collection, addDoc } from "firebase/firestore";
+import Swal from "sweetalert2";
 
-export const Container = styled.div`
+const Container = styled.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -12,7 +16,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
 `;
-export const Form = styled.div`
+const Form = styled.div`
   position: relative;
   padding: 32px;
   border-radius: 13px;
@@ -52,7 +56,17 @@ export const Form = styled.div`
   }
 `;
 
-export const DestionationForm = (props) => {
+export const DestionationBatangasForm = (props) => {
+  const [FirstName, setFirstName] = useState();
+  const [MiddleName, setMiddleName] = useState();
+  const [LastName, setLastName] = useState();
+  const [PhoneNumber, setPhoneNumber] = useState();
+  const [Location, setLocation] = useState();
+
+  const usersCollectionRef = collection(database, "Batangas Travel Form");
+
+  const handleSubmit = () => {};
+
   return props.trigger ? (
     <>
       <Container>
@@ -63,19 +77,37 @@ export const DestionationForm = (props) => {
                 <h3>Travel Form</h3>
                 <h3>{data.title}</h3>
                 <form>
-                  <input placeholder="First Name:" />
-                  <input placeholder="Last Name:" />
-                  <input placeholder="Family Name:" />
-                  <input placeholder="Mobile Number:" />
+                  <input
+                    id="FirstName"
+                    placeholder="First Name:"
+                    value={FirstName}
+                  />
+                  <input
+                    id="MiddleName"
+                    placeholder="Middle Name:"
+                    value={MiddleName}
+                  />
+                  <input
+                    id="LastName"
+                    placeholder="Last Name:"
+                    value={LastName}
+                  />
+                  <input
+                    id="MobileNumber"
+                    placeholder="Mobile Number: "
+                    value={PhoneNumber}
+                  />
                   <br></br>
-                  <input placeholder="Email" />
-                  <br></br>
-                  <input placeholder="Subject" />
+                  <input
+                    id="Location"
+                    placeholder="Location of Pickup: "
+                    value={Location}
+                  />
                   <br></br>
                   <Button
                     className="Submit_Button"
                     variant="contained"
-                    type="submit"
+                    onClick={handleSubmit}
                   >
                     Send
                   </Button>
@@ -96,4 +128,4 @@ export const DestionationForm = (props) => {
   );
 };
 
-export default DestionationForm;
+export default DestionationBatangasForm;

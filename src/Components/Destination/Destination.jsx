@@ -5,10 +5,11 @@ import { device } from "../../MediaQuery";
 import { Button } from "@mui/material";
 import { FifthColor, FourthColor } from "../../Global";
 // === Components ===
-import DestionationForm from "./DestinationBatangasForm";
+import DestionationBatangasForm from "./Batangas/DestinationBatangasForm";
+import DestinationDataBatangas from "./Batangas/DestinationDataBatangas";
 
-import { DestinationDataBatangas } from "./DestinationDataBatangas";
-import DestinationDataBaguio from "./DestionationDataBaguio";
+import { DestionationBaguioForm } from "./Baguio/DestinationBaguioForm";
+import DestinationDataBaguio from "./Baguio/DestionationDataBaguio";
 
 export const Container = styled.div`
   text-align: center;
@@ -194,7 +195,7 @@ export const Description = styled.div`
 
 const Destination = () => {
   const [formPopUp, SetFormPopup] = useState(false);
-
+  const [formPopUp1, SetFormPopup1] = useState(false);
   return (
     <>
       <Container>
@@ -221,7 +222,7 @@ const Destination = () => {
                   >
                     {data.button}
                   </Button>
-                  <DestionationForm
+                  <DestionationBatangasForm
                     trigger={formPopUp}
                     setTrigger={SetFormPopup}
                   />
@@ -249,13 +250,13 @@ const Destination = () => {
                   <Button
                     className="Button"
                     variant="contained"
-                    onClick={() => SetFormPopup(true)}
+                    onClick={() => SetFormPopup1(true)}
                   >
                     {data.button}
                   </Button>
-                  <DestionationForm
-                    trigger={formPopUp}
-                    setTrigger={SetFormPopup}
+                  <DestionationBaguioForm
+                    trigger={formPopUp1}
+                    setTrigger={SetFormPopup1}
                   />
                 </Description>
               </Heading>
