@@ -1,9 +1,9 @@
-const TaalPicture1 = require("../../../assets/png/Taal/Taal2.jpg");
+const TaalPicture1 = require("../../../assets/png/Taal/Taal1.jpg");
 const TaalPicture2 = require("../../../assets/png/Taal/Taal2.jpg");
 
 export const DestinationDataBatangas = [
   {
-    title: "Taal Lake, Batangas",
+    title: "Batangas, Taal Lake",
     description:
       "" +
       `The Taal Lake, also known as Talisay Lake and Bombón Lake, is a

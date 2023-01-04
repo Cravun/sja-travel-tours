@@ -4,7 +4,7 @@ import { FourthColor, PrimaryColor } from "../../Global";
 import { device } from "../../MediaQuery";
 import Home_Hero from "../../assets/png/Home_Hero.png";
 import { Button } from "@mui/material";
-
+import Service from "../Service/Service";
 export const Container = styled.div`
   z-index: -1;
   top: 26%;
@@ -151,9 +151,9 @@ const HomeHero = () => {
           Providing you with comfort and relaxation across the nation at the
           cheapest rates.
         </Heading>
-        <Button className="Button" variant="elevated">
+        {/* <Button className="Button" variant="elevated" onClick={Service}>
           Travel Plan
-        </Button>
+        </Button> */}
       </Container>
     </>
   );

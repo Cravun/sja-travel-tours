@@ -8,8 +8,14 @@ import { FifthColor, FourthColor } from "../../Global";
 import DestionationBatangasForm from "./Batangas/DestinationBatangasForm";
 import DestinationDataBatangas from "./Batangas/DestinationDataBatangas";
 
-import { DestionationBaguioForm } from "./Baguio/DestinationBaguioForm";
+import DestionationBaguioForm from "./Baguio/DestinationBaguioForm";
 import DestinationDataBaguio from "./Baguio/DestionationDataBaguio";
+
+import DestinationCebuForm from "./Cebu/DestinationCebuForm";
+import DestinationDataCebu from "./Cebu/DestionationDataCebu";
+
+import DestionationBoholForm from "./Bohol/DestinationBoholForm";
+import DestinationDataBohol from "./Bohol/DestinationDataBohol";
 
 export const Container = styled.div`
   text-align: center;
@@ -205,6 +211,7 @@ const Destination = () => {
         </p>
       </Container>
 
+      {/* Baguio Tour */}
       <Destination1>
         {DestinationDataBaguio.map((data) => {
           return (
@@ -237,8 +244,75 @@ const Destination = () => {
         })}
       </Destination1>
 
+      {/* Batangas Tour */}
       <Destination1>
         {DestinationDataBatangas.map((data) => {
+          return (
+            <>
+              <Heading>
+                <Title>
+                  <h1>{data.title}</h1>
+                </Title>
+                <Description>
+                  <p>{data.description}</p>
+                  <Button
+                    className="Button"
+                    variant="contained"
+                    onClick={() => SetFormPopup1(true)}
+                  >
+                    {data.button}
+                  </Button>
+                  <DestionationBatangasForm
+                    trigger={formPopUp1}
+                    setTrigger={SetFormPopup1}
+                  />
+                </Description>
+              </Heading>
+              <Image1>
+                <img alt={data.ALT} src={data.thumbnail1}></img>
+                <img alt={data.ALT} src={data.thumbnail2}></img>
+              </Image1>
+            </>
+          );
+        })}
+      </Destination1>
+
+      {/* Cebu Tour */}
+      <Destination1>
+        {DestinationDataCebu.map((data) => {
+          return (
+            <>
+              <Heading>
+                <Title>
+                  <h1>{data.title}</h1>
+                </Title>
+                <Description>
+                  <p>{data.description}</p>
+                  <Button
+                    className="Button"
+                    variant="contained"
+                    onClick={() => SetFormPopup1(true)}
+                  >
+                    {data.button}
+                  </Button>
+                  <DestinationCebuForm
+                    trigger={formPopUp1}
+                    setTrigger={SetFormPopup1}
+                  />
+                </Description>
+              </Heading>
+              <Image1>
+                <img alt={data.ALT} src={data.thumbnail1}></img>
+                <img alt={data.ALT} src={data.thumbnail2}></img>
+              </Image1>
+            </>
+          );
+        })}
+      </Destination1>
+
+      {/* Bohol Tour */}
+      <Destination1>
+        {DestinationDataBohol.map((data) => {
           return (
             <>
               <Heading>
@@ -254,7 +328,7 @@ const Destination = () => {
                   >
                     {data.button}
                   </Button>
-                  <DestionationBatangasForm
+                  <DestionationBoholForm
                     trigger={formPopUp}
                     setTrigger={SetFormPopup}
                   />

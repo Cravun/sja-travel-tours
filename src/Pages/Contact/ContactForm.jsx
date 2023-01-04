@@ -73,7 +73,31 @@ export const ContactForm = () => {
   const [Subject, setSubject] = useState();
   const [Message, setMessage] = useState();
 
-  const usersCollectionRef = collection(database, "Contact");
+  const usersCollectionRef = collection(database, "Contact Form");
+  const handleSubmit = () => {
+    addDoc(usersCollectionRef, {
+      Name: Name,
+      Email: Email,
+      Subject: Subject,
+      Message: Message,
+    })
+      .then(() => {
+        if (
+          !Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Form Submitted Succesfully!",
+            showCancelButton: false, // There won't be any cancel button
+            showConfirmButton: false, // There won't be any confirm button
+          }).then(() => {
+            document.location = "http://localhost:3000/Contact";
+          })
+        );
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  };
 
   return (
     <>
