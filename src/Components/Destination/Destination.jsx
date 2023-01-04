@@ -206,38 +206,6 @@ const Destination = () => {
       </Container>
 
       <Destination1>
-        {DestinationDataBatangas.map((data) => {
-          return (
-            <>
-              <Heading>
-                <Title>
-                  <h1>{data.title}</h1>
-                </Title>
-                <Description>
-                  <p>{data.description}</p>
-                  <Button
-                    className="Button"
-                    variant="contained"
-                    onClick={() => SetFormPopup(true)}
-                  >
-                    {data.button}
-                  </Button>
-                  <DestionationBatangasForm
-                    trigger={formPopUp}
-                    setTrigger={SetFormPopup}
-                  />
-                </Description>
-              </Heading>
-              <Image1>
-                <img alt={data.ALT} src={data.thumbnail1}></img>
-                <img alt={data.ALT} src={data.thumbnail2}></img>
-              </Image1>
-            </>
-          );
-        })}
-      </Destination1>
-
-      <Destination1>
         {DestinationDataBaguio.map((data) => {
           return (
             <>
@@ -257,6 +225,38 @@ const Destination = () => {
                   <DestionationBaguioForm
                     trigger={formPopUp1}
                     setTrigger={SetFormPopup1}
+                  />
+                </Description>
+              </Heading>
+              <Image1>
+                <img alt={data.ALT} src={data.thumbnail1}></img>
+                <img alt={data.ALT} src={data.thumbnail2}></img>
+              </Image1>
+            </>
+          );
+        })}
+      </Destination1>
+
+      <Destination1>
+        {DestinationDataBatangas.map((data) => {
+          return (
+            <>
+              <Heading>
+                <Title>
+                  <h1>{data.title}</h1>
+                </Title>
+                <Description>
+                  <p>{data.description}</p>
+                  <Button
+                    className="Button"
+                    variant="contained"
+                    onClick={() => SetFormPopup(true)}
+                  >
+                    {data.button}
+                  </Button>
+                  <DestionationBatangasForm
+                    trigger={formPopUp}
+                    setTrigger={SetFormPopup}
                   />
                 </Description>
               </Heading>
