@@ -65,31 +65,6 @@ export const DestionationBatangasForm = (props) => {
 
   const usersCollectionRef = collection(database, "Batangas Travel Form");
 
-  const handleSubmit = () => {
-    addDoc(usersCollectionRef, {
-      FirstName: FirstName,
-      MiddleName: MiddleName,
-      LastName: LastName,
-      PhoneNumber: PhoneNumber,
-      Location: Location,
-    })
-      .then(() => {
-        if (
-          !Swal.fire({
-            position: "center",
-            icon: "success",
-            title: "Form Submitted Succesfully!",
-            showCancelButton: false, // There won't be any cancel button
-            showConfirmButton: false, // There won't be any confirm button
-          }).then(() => {
-            document.location = "http://localhost:3000/";
-          })
-        );
-      })
-      .catch((error) => {
-        alert(error);
-      });
-  };
 
   return props.trigger ? (
     <>
