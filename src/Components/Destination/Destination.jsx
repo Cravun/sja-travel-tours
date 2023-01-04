@@ -200,8 +200,10 @@ export const Description = styled.div`
 `;
 
 const Destination = () => {
-  const [formPopUp, SetFormPopup] = useState(false);
-  const [formPopUp1, SetFormPopup1] = useState(false);
+  const [formPopUpBaguio, SetFormPopupBaguio] = useState(false);
+  const [formPopUpBatangas, SetFormPopupBatangas] = useState(false);
+  const [formPopUpBohol, SetFormPopupBohol] = useState(false);
+  const [formPopUpCebu, SetFormPopupCebu] = useState(false);
   return (
     <>
       <Container>
@@ -225,13 +227,13 @@ const Destination = () => {
                   <Button
                     className="Button"
                     variant="contained"
-                    onClick={() => SetFormPopup1(true)}
+                    onClick={() => SetFormPopupBaguio(true)}
                   >
                     {data.button}
                   </Button>
                   <DestionationBaguioForm
-                    trigger={formPopUp1}
-                    setTrigger={SetFormPopup1}
+                    trigger={formPopUpBaguio}
+                    setTrigger={SetFormPopupBaguio}
                   />
                 </Description>
               </Heading>
@@ -258,46 +260,13 @@ const Destination = () => {
                   <Button
                     className="Button"
                     variant="contained"
-                    onClick={() => SetFormPopup1(true)}
+                    onClick={() => SetFormPopupBatangas(true)}
                   >
                     {data.button}
                   </Button>
                   <DestionationBatangasForm
-                    trigger={formPopUp1}
-                    setTrigger={SetFormPopup1}
-                  />
-                </Description>
-              </Heading>
-              <Image1>
-                <img alt={data.ALT} src={data.thumbnail1}></img>
-                <img alt={data.ALT} src={data.thumbnail2}></img>
-              </Image1>
-            </>
-          );
-        })}
-      </Destination1>
-
-      {/* Cebu Tour */}
-      <Destination1>
-        {DestinationDataCebu.map((data) => {
-          return (
-            <>
-              <Heading>
-                <Title>
-                  <h1>{data.title}</h1>
-                </Title>
-                <Description>
-                  <p>{data.description}</p>
-                  <Button
-                    className="Button"
-                    variant="contained"
-                    onClick={() => SetFormPopup1(true)}
-                  >
-                    {data.button}
-                  </Button>
-                  <DestinationCebuForm
-                    trigger={formPopUp1}
-                    setTrigger={SetFormPopup1}
+                    trigger={formPopUpBatangas}
+                    setTrigger={SetFormPopupBatangas}
                   />
                 </Description>
               </Heading>
@@ -324,13 +293,45 @@ const Destination = () => {
                   <Button
                     className="Button"
                     variant="contained"
-                    onClick={() => SetFormPopup(true)}
+                    onClick={() => SetFormPopupBohol(true)}
                   >
                     {data.button}
                   </Button>
                   <DestionationBoholForm
-                    trigger={formPopUp}
-                    setTrigger={SetFormPopup}
+                    trigger={formPopUpBohol}
+                    setTrigger={SetFormPopupBohol}
+                  />
+                </Description>
+              </Heading>
+              <Image1>
+                <img alt={data.ALT} src={data.thumbnail1}></img>
+                <img alt={data.ALT} src={data.thumbnail2}></img>
+              </Image1>
+            </>
+          );
+        })}
+      </Destination1>
+      {/* Cebu Tour */}
+      <Destination1>
+        {DestinationDataCebu.map((data) => {
+          return (
+            <>
+              <Heading>
+                <Title>
+                  <h1>{data.title}</h1>
+                </Title>
+                <Description>
+                  <p>{data.description}</p>
+                  <Button
+                    className="Button"
+                    variant="contained"
+                    onClick={() => SetFormPopupCebu(true)}
+                  >
+                    {data.button}
+                  </Button>
+                  <DestinationCebuForm
+                    trigger={formPopUpCebu}
+                    setTrigger={SetFormPopupCebu}
                   />
                 </Description>
               </Heading>
